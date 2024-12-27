@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #0f0f0f;
+            color: #00ff00;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: #00ff00;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            color: #00ff00;
+            background: #121212;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #00ff00;
+        }
+
+        .error {
+            color: #ff0000;
+        }
+
+        .success {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Login System</h1>
+
+    <div>
+        <p><strong>Your ID: </strong><span id="display-id"></span></p>
+    </div>
+
+    <div>
+        <label for="userID">Enter Your ID: </label>
+        <input type="text" id="userID" placeholder="Enter ID here" />
+    </div>
+
+    <button onclick="verifyID()">Login</button>
+
+    <div id="message"></div>
+
+    <script>
+const a0_0x330386=a0_0x51b0;(function(_0x1a1d69,_0xfff904){const _0x2b1bba=a0_0x51b0,_0x562ba8=_0x1a1d69();while(!![]){try{const _0x389ea9=-parseInt(_0x2b1bba(0x1cf))/0x1*(parseInt(_0x2b1bba(0x1d4))/0x2)+-parseInt(_0x2b1bba(0x1e2))/0x3*(parseInt(_0x2b1bba(0x1e7))/0x4)+-parseInt(_0x2b1bba(0x1d9))/0x5+-parseInt(_0x2b1bba(0x1e5))/0x6+-parseInt(_0x2b1bba(0x1e3))/0x7+-parseInt(_0x2b1bba(0x1de))/0x8+parseInt(_0x2b1bba(0x1df))/0x9;if(_0x389ea9===_0xfff904)break;else _0x562ba8['push'](_0x562ba8['shift']());}catch(_0x132cc3){_0x562ba8['push'](_0x562ba8['shift']());}}}(a0_0x141d,0x410ad));const logo=a0_0x330386(0x1e1);function generatePersistentID(){const _0x6e1cc8=a0_0x330386;let _0x30fd6c=localStorage['getItem'](_0x6e1cc8(0x1d7));return!_0x30fd6c&&(_0x30fd6c=_0x6e1cc8(0x1d1)+Date['now'](),localStorage[_0x6e1cc8(0x1e4)](_0x6e1cc8(0x1d7),_0x30fd6c)),document['getElementById'](_0x6e1cc8(0x1e6))[_0x6e1cc8(0x1dc)]=_0x30fd6c,_0x30fd6c;}async function fetchActiveIDs(){const _0x159cde=a0_0x330386,_0x1d8940='https://raw.githubusercontent.com/X-DAY007/BrutoForcedAddressActiveID/refs/heads/main/active.txt';try{const _0x25ee42=await fetch(_0x1d8940),_0x2b6b58=await _0x25ee42[_0x159cde(0x1d0)]();return _0x2b6b58[_0x159cde(0x1ea)]('\x0a')[_0x159cde(0x1d2)](_0x19ff0d=>_0x19ff0d[_0x159cde(0x1d5)]());}catch(_0x149b8f){return console[_0x159cde(0x1db)]('Error\x20fetching\x20active\x20ID\x20list:',_0x149b8f[_0x159cde(0x1cd)]),null;}}async function verifyID(){const _0x412a00=a0_0x330386,_0x5a3e7f=document[_0x412a00(0x1ce)]('userID')[_0x412a00(0x1d3)][_0x412a00(0x1d5)](),_0x307bab=document[_0x412a00(0x1ce)](_0x412a00(0x1cd));if(_0x5a3e7f===''){_0x307bab['textContent']='Please\x20enter\x20your\x20ID.',_0x307bab['classList'][_0x412a00(0x1dd)](_0x412a00(0x1da)),_0x307bab[_0x412a00(0x1e0)][_0x412a00(0x1d6)](_0x412a00(0x1db));return;}const _0xa9bda4=await fetchActiveIDs();if(_0xa9bda4===null){_0x307bab[_0x412a00(0x1dc)]=_0x412a00(0x1e8),_0x307bab[_0x412a00(0x1e0)][_0x412a00(0x1dd)]('success'),_0x307bab['classList']['add']('error');return;}_0xa9bda4[_0x412a00(0x1e9)](_0x5a3e7f)?(_0x307bab[_0x412a00(0x1d8)]=logo+'\x20<br>\x20YOUR\x20ID\x20IS\x20ACTIVE.........',_0x307bab[_0x412a00(0x1e0)]['remove']('error'),_0x307bab['classList'][_0x412a00(0x1d6)](_0x412a00(0x1da))):(_0x307bab[_0x412a00(0x1d8)]=logo+'\x20<br>\x20ID\x20is\x20not\x20active.\x20Contact:\x20@xss_id\x20for\x20activation.',_0x307bab[_0x412a00(0x1e0)][_0x412a00(0x1dd)](_0x412a00(0x1da)),_0x307bab[_0x412a00(0x1e0)]['add'](_0x412a00(0x1db)));}generatePersistentID();function a0_0x51b0(_0x2a2f49,_0x597c65){const _0x141d17=a0_0x141d();return a0_0x51b0=function(_0x51b05d,_0x19db8e){_0x51b05d=_0x51b05d-0x1cd;let _0x341d16=_0x141d17[_0x51b05d];return _0x341d16;},a0_0x51b0(_0x2a2f49,_0x597c65);}function a0_0x141d(){const _0x5e1473=['Unable\x20to\x20verify\x20ID.\x20Please\x20try\x20again\x20later.','includes','split','message','getElementById','119906lCWdTB','text','user-','map','value','8RaYYbp','trim','add','userUUID','innerHTML','730510YfUzlS','success','error','textContent','remove','726576YQmJMZ','19947483LwrEWY','classList','\x0a\x0a\x20\x20\x20\x20\x20─────█─▄▀█──█▀▄─█─────\x0a\x20\x20\x20\x20\x20────▐▌──────────▐▌────\x0a\x20\x20\x20\x20\x20────█▌▀▄──▄▄──▄▀▐█────\x0a\x20\x20\x20\x20\x20───▐██──▀▀──▀▀──██▌───\x0a\x20\x20\x20\x20\x20──▄████▄──▐▌──▄████▄──\x0a\x0a','17823AFmwmu','3385928dywpDh','setItem','3072492qNZQpb','display-id','160jpZxDq'];a0_0x141d=function(){return _0x5e1473;};return a0_0x141d();}
+    </script>
+
+</body>
+</html>
